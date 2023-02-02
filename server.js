@@ -77,7 +77,7 @@ server.post("/user/login", function(request, response){
     if(user?.password === password) {
       response.send({success: true, user})
     } else {
-      response.send({success: false, error: "Username or password isn't correct"})
+      response.send({success: false, message: "Username or password isn't correct"})
     }
   })
 });
@@ -102,7 +102,7 @@ server.post("/user/register", function(request, response){
           response.send({success: true, message: "User added successfully"})
         });
     } else {
-      response.send({success: false, error: "Username is already exists"})
+      response.send({success: false, message: "Username is already exists"})
     }
   })
 });
@@ -190,7 +190,7 @@ server.post("/top/addscore", function(request, response){
               response.send({success: true, message: "Top updated successfully"})
             });
         } else {
-          response.send({success: false, error: `Top wasn't updated: ${err.message}`})
+          response.send({success: false, message: `Top wasn't updated: ${err.message}`})
         }
       })
     }
