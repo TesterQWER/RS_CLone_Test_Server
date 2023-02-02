@@ -2,8 +2,11 @@ const express = require("express");
 const pass = require("path");
 const mongoose = require("mongoose");
 const bp = require('body-parser');
+const cors = require('cors')
+
 
 const server = express();
+server.use(cors());
 server.use(bp.json());
 server.use(bp.urlencoded({ extended: true }));
 
