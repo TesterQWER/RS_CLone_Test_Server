@@ -7,7 +7,7 @@ const server = express();
 server.use(bp.json());
 server.use(bp.urlencoded({ extended: true }));
 
-const PORT = 5002;
+const PORT = process.env.PORT || 5002;
 const db = "mongodb+srv://Admin:nn6vJw.n7d3FXZs@cluster0.pzvo6cd.mongodb.net/games-stack?retryWrites=true&w=majority";
 
 const userSchema = new mongoose.Schema({
