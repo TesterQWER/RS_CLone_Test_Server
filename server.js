@@ -52,7 +52,7 @@ server.get("/", function(request, response){
       { 'username': 'User_Name', 'password': '12345' } <br>
       on 'https://rsclonetestserver-production.up.railway.app/user/login' <br>
     </li>
-    <li>Check existence of Username: GET request with body: <br>
+    <li>Check existence of Username: POST request with body: <br>
       { 'username': 'User_Name', } <br>
       on 'https://rsclonetestserver-production.up.railway.app/user/check' <br>
     </li>
@@ -114,7 +114,7 @@ server.post("/user/register", function(request, response){
   })
 });
 
-server.get("/user/check", function(request, response){
+server.post("/user/check", function(request, response){
   console.log(request.body);
   const username = request.body.username;
 
