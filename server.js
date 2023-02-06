@@ -241,7 +241,7 @@ server.post("/user/scores", function(request, response){
   Users.findOne({username: username}, (err, user) => {
     if(err) {console.log(`Error: ${err}`)}
     if(user !== null) {
-      response.send({success: true, [username]: sortObject(user.highScores, sortOption)});
+      response.send({success: true, username: username, scores: sortObject(user.highScores, sortOption)});
     } else {
       response.send({success: false, message: "Score isn't available"});
     }
@@ -272,7 +272,7 @@ server.post("/game/top10", function(request, response){
   Games.findOne({gamename: gamename}, (err, game) => {
     if(err) {console.log(`Error: ${err}`)}
     if(game !== null) {
-      response.send({success: true, [gamename]: sortObject(game.userScores, sortOption)});
+      response.send({success: true, gamename: gamename, scores: sortObject(game.userScores, sortOption)});
     } else {
       response.send({success: false, message: "Top isn't available"});
     }
