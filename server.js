@@ -65,11 +65,11 @@ server.get("/", function(request, response){
       on 'https://rsclonetestserver-production.up.railway.app/top/addscore' <br>
     </li>
     <li>Get current user scores with sorting ability: POST request with body: <br>
-      { 'username': 'User_Name', 'options': 'ascScore'/'descScore'/'ascGame'/'descGame'/ } <br>
+      { 'username': 'User_Name', 'option': 'ascScore'/'descScore'/'ascGame'/'descGame'/ } <br>
       on 'https://rsclonetestserver-production.up.railway.app/user/scores' <br>
     </li>
     <li>Get specified game TOP10 with sorting ability: POST request with body: <br>
-      { 'gamename': 'tetris', 'options': 'ascScore'/'descScore'/'ascName'/'descName'/ } <br>
+      { 'gamename': 'tetris', 'option': 'ascScore'/'descScore'/'ascName'/'descName'/ } <br>
       on 'https://rsclonetestserver-production.up.railway.app/game/top10' <br>
     </li>
   </ul>`)
