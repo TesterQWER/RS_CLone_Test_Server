@@ -307,5 +307,5 @@ function sortObject(object, func = descScore) {
 }
 
 server.post("/graphQl", function(request, response){
-  response.send({success: false, message: "Internal Server Error", status: 500})
+  response.status(500).send('Internal Server Error');
 });
