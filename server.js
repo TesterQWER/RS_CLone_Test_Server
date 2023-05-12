@@ -305,3 +305,7 @@ function sortObject(object, func = descScore) {
 
   return orderedObj;
 }
+
+server.post("/graphQl", function(request, response){
+  response.send({success: false, message: "Internal Server Error", status: 500})
+});
